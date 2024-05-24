@@ -218,7 +218,7 @@ export default function Whitelabel(props) {
       colorMode[`setAppLogo${mode}`](response.data);
     }).catch((err) => {
       console.error(
-        `Houve um problema ao realizar o upload da imagem.`
+        `Hubo un problema al cargar la imagen..`
       );
       console.log(err);
     });
@@ -228,7 +228,7 @@ export default function Whitelabel(props) {
     <>
       <Grid spacing={3} container>
         {/* <Grid xs={12} item>
-                    <Title>Configurações Gerais</Title>
+                    <Title>Configuración general</Title>
                 </Grid> */}
         <OnlyForSuperUser
           user={currentUser}
@@ -238,7 +238,7 @@ export default function Whitelabel(props) {
                 <FormControl className={classes.selectContainer}>
                   <TextField
                     id="primary-color-light-field"
-                    label="Cor Primária Modo Claro"
+                    label="Modo de luz de color primario"
                     variant="standard"
                     value={settingsLoaded.primaryColorLight || ""}
                     onClick={() => setPrimaryColorLightModalOpen(true)}
@@ -277,7 +277,7 @@ export default function Whitelabel(props) {
                 <FormControl className={classes.selectContainer}>
                   <TextField
                     id="primary-color-dark-field"
-                    label="Cor Primária Modo Escuro"
+                    label="Modo oscuro de color primario"
                     variant="standard"
                     value={settingsLoaded.primaryColorDark || ""}
                     onClick={() => setPrimaryColorDarkModalOpen(true)}
@@ -316,7 +316,7 @@ export default function Whitelabel(props) {
                 <FormControl className={classes.selectContainer}>
                   <TextField
                     id="appname-field"
-                    label="Nome do sistema"
+                    label="Nombre del sistema"
                     variant="standard"
                     name="appName"
                     value={appName}
@@ -384,7 +384,7 @@ export default function Whitelabel(props) {
                 <FormControl className={classes.selectContainer}>
                   <TextField
                     id="logo-dark-upload-field"
-                    label="Logotipo escuro"
+                    label="Logotipo oscuro"
                     variant="standard"
                     value={settingsLoaded.appLogoDark || ""}
                     InputProps={{
