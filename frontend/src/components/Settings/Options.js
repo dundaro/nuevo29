@@ -143,7 +143,7 @@ export default function Options(props) {
       key: "userRating",
       value,
     });
-    toast.success("Operação atualizada com sucesso.");
+    toast.success("Operación actualizada con éxito.");
     setLoadingUserRating(false);
   }
 
@@ -154,8 +154,8 @@ export default function Options(props) {
       key: "scheduleType",
       value,
     });
-    //toast.success("Oraçãpeo atualizada com sucesso.");
-    toast.success('Operação atualizada com sucesso.', {
+    //toast.success("Operación actualizada con éxito.");
+    toast.success('Oración actualizada con éxito.', {
       position: "top-right",
       autoClose: 2000,
       hideProgressBar: false,
@@ -177,7 +177,7 @@ export default function Options(props) {
       key: "call",
       value,
     });
-    toast.success("Operação atualizada com sucesso.");
+    toast.success("Operación actualizada con éxito.");
     setLoadingCallType(false);
   }
 
@@ -188,7 +188,7 @@ export default function Options(props) {
       key: "chatBotType",
       value,
     });
-    toast.success("Operação atualizada com sucesso.");
+    toast.success("Operación actualizada con éxito.");
     setLoadingChatbotType(false);
   }
 
@@ -199,7 +199,7 @@ export default function Options(props) {
       key: "allowSignup",
       value,
     });
-    toast.success("Operação atualizada com sucesso.");
+    toast.success("Operación actualizada con éxito.");
     setLoadingAllowSignup(false);
   }
 
@@ -210,7 +210,7 @@ export default function Options(props) {
       key: "CheckMsgIsGroup",
       value,
     });
-    toast.success("Operação atualizada com sucesso.");
+    toast.success("Operación actualizada con éxito.");
     setCheckMsgIsGroup(false);
     /*     if (typeof scheduleTypeChanged === "function") {
           scheduleTypeChanged(value);
@@ -221,11 +221,11 @@ export default function Options(props) {
     <>
       <Grid spacing={3} container>
         {/* <Grid xs={12} item>
-                    <Title>Configurações Gerais</Title>
+                    <Title>Configuración general</Title>
                 </Grid> */}
         <Grid xs={12} sm={6} md={4} item>
           <FormControl className={classes.selectContainer}>
-            <InputLabel id="ratings-label">Avaliações</InputLabel>
+            <InputLabel id="ratings-label">Evaluaciones</InputLabel>
             <Select
               labelId="ratings-label"
               value={userRating}
@@ -233,18 +233,18 @@ export default function Options(props) {
                 handleChangeUserRating(e.target.value);
               }}
             >
-              <MenuItem value={"disabled"}>Desabilitadas</MenuItem>
+              <MenuItem value={"disabled"}>Deshabilitadas</MenuItem>
               <MenuItem value={"enabled"}>Habilitadas</MenuItem>
             </Select>
             <FormHelperText>
-              {loadingUserRating && "Atualizando..."}
+              {loadingUserRating && "Actualizando..."}
             </FormHelperText>
           </FormControl>
         </Grid>
         <Grid xs={12} sm={6} md={4} item>
           <FormControl className={classes.selectContainer}>
             <InputLabel id="schedule-type-label">
-              Gerenciamento de Expediente
+              Administracion de Horario
             </InputLabel>
             <Select
               labelId="schedule-type-label"
@@ -254,8 +254,8 @@ export default function Options(props) {
               }}
             >
               <MenuItem value={"disabled"}>Desabilitado</MenuItem>
-              <MenuItem value={"queue"}>Gerenciamento Por Fila</MenuItem>
-              <MenuItem value={"company"}>Gerenciamento Por Empresa</MenuItem>
+              <MenuItem value={"queue"}>Gestion Por Fila</MenuItem>
+              <MenuItem value={"company"}>Gestion Por Empresa</MenuItem>
             </Select>
             <FormHelperText>
               {loadingScheduleType && "Atualizando..."}
@@ -274,11 +274,11 @@ export default function Options(props) {
                 handleGroupType(e.target.value);
               }}
             >
-              <MenuItem value={"disabled"}>Desativado</MenuItem>
-              <MenuItem value={"enabled"}>Ativado</MenuItem>
+              <MenuItem value={"disabled"}>Desactivado</MenuItem>
+              <MenuItem value={"enabled"}>Activado</MenuItem>
             </Select>
             <FormHelperText>
-              {loadingScheduleType && "Atualizando..."}
+              {loadingScheduleType && "Actualizando..."}
             </FormHelperText>
           </FormControl>
         </Grid>
@@ -294,8 +294,8 @@ export default function Options(props) {
                 handleCallType(e.target.value);
               }}
             >
-              <MenuItem value={"disabled"}>Não Aceitar</MenuItem>
-              <MenuItem value={"enabled"}>Aceitar</MenuItem>
+              <MenuItem value={"disabled"}>No aceptarr</MenuItem>
+              <MenuItem value={"enabled"}>Aceptar</MenuItem>
             </Select>
             <FormHelperText>
               {loadingCallType && "Atualizando..."}
@@ -317,7 +317,7 @@ export default function Options(props) {
               <MenuItem value={"text"}>Texto</MenuItem>
             </Select>
             <FormHelperText>
-              {loadingChatbotType && "Atualizando..."}
+              {loadingChatbotType && "Atcualizando..."}
             </FormHelperText>
           </FormControl>
         </Grid>
@@ -336,8 +336,8 @@ export default function Options(props) {
                       handleAllowSignup(e.target.value);
                     }}
                   >
-                    <MenuItem value={"disabled"}>Desativado</MenuItem>
-                    <MenuItem value={"enabled"}>Ativado</MenuItem>
+                    <MenuItem value={"disabled"}>Desactivado</MenuItem>
+                    <MenuItem value={"enabled"}>Activado</MenuItem>
                   </Select>
                   <FormHelperText>
                     {loadingAllowSignup && "Atualizando..."}
