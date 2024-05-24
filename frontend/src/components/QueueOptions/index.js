@@ -271,7 +271,7 @@ export function QueueOptionStepper({ queueId, options, updateOptions }) {
     return (
       <>
         <Typography>
-          {option.title !== "" ? option.title : "Título não definido"}
+          {option.title !== "" ? option.title : "Título no definido"}
           <IconButton
             variant="outlined"
             size="small"
