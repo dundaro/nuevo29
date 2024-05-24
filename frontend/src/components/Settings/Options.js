@@ -155,7 +155,7 @@ export default function Options(props) {
       value,
     });
     //toast.success("Operación actualizada con éxito.");
-    toast.success('Oración actualizada con éxito.', {
+    toast.success('Operación actualizada con éxito.', {
       position: "top-right",
       autoClose: 2000,
       hideProgressBar: false,
