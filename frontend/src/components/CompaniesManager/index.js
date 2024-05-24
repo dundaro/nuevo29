@@ -232,11 +232,11 @@ export function CompanyForm(props) {
               </Grid>
               <Grid xs={12} sm={6} md={2} item>
                 <FormControl margin="dense" variant="outlined" fullWidth>
-                  <InputLabel htmlFor="plan-selection">Plano</InputLabel>
+                  <InputLabel htmlFor="plan-selection">Plan</InputLabel>
                   <Field
                     as={Select}
                     id="plan-selection"
-                    label="Plano"
+                    label="Plan"
                     labelId="plan-selection-label"
                     name="planId"
                     margin="dense"
@@ -261,24 +261,24 @@ export function CompanyForm(props) {
                     name="status"
                     margin="dense"
                   >
-                    <MenuItem value={true}>Sim</MenuItem>
-                    <MenuItem value={false}>Não</MenuItem>
+                    <MenuItem value={true}>Si</MenuItem>
+                    <MenuItem value={false}>No</MenuItem>
                   </Field>
                 </FormControl>
               </Grid>
               <Grid xs={12} sm={6} md={2} item>
                 <FormControl margin="dense" variant="outlined" fullWidth>
-                  <InputLabel htmlFor="status-selection">Campanhas</InputLabel>
+                  <InputLabel htmlFor="status-selection">Campañas</InputLabel>
                   <Field
                     as={Select}
                     id="campaigns-selection"
-                    label="Campanhas"
+                    label="Campañas"
                     labelId="campaigns-selection-label"
                     name="campaignsEnabled"
                     margin="dense"
                   >
                     <MenuItem value={true}>Habilitadas</MenuItem>
-                    <MenuItem value={false}>Desabilitadas</MenuItem>
+                    <MenuItem value={false}>Deshabilitadas</MenuItem>
                   </Field>
                 </FormControl>
               </Grid>
@@ -301,17 +301,17 @@ export function CompanyForm(props) {
               <Grid xs={12} sm={6} md={2} item>
                 <FormControl margin="dense" variant="outlined" fullWidth>
                   <InputLabel htmlFor="recorrencia-selection">
-                    Recorrência
+                    Recurrencia
                   </InputLabel>
                   <Field
                     as={Select}
-                    label="Recorrência"
+                    label="Recurrencia"
                     labelId="recorrencia-selection-label"
                     id="recurrence"
                     name="recurrence"
                     margin="dense"
                   >
-                    <MenuItem value="MENSAL">Mensal</MenuItem>
+                    <MenuItem value="MENSAL">Menusal</MenuItem>
                     <MenuItem value="BIMESTRAL">Bimestral</MenuItem>
                     <MenuItem value="TRIMESTRAL">Trimestral</MenuItem>
                     <MenuItem value="SEMESTRAL">Semestral</MenuItem>
@@ -400,7 +400,7 @@ export function CompaniesManagerGrid(props) {
   const { dateToClient } = useDate();
 
   const renderStatus = (row) => {
-    return row.status === false ? "Não" : "Sim";
+    return row.status === false ? "No" : "Si";
   };
 
   const renderPlan = (row) => {
@@ -415,10 +415,10 @@ export function CompaniesManagerGrid(props) {
     ) {
       const setting = row.settings.find((s) => s.key === "campaignsEnabled");
       if (setting) {
-        return setting.value === "true" ? "Habilitadas" : "Desabilitadas";
+        return setting.value === "true" ? "Habilitadas" : "Deshabilitadas";
       }
     }
-    return "Desabilitadas";
+    return "Deshabilitadas";
   };
 
   const rowStyle = (record) => {
@@ -451,13 +451,13 @@ export function CompaniesManagerGrid(props) {
             <TableCell align="center" style={{ width: "1%" }}>
               #
             </TableCell>
-            <TableCell align="left">Nome</TableCell>
+            <TableCell align="left">Nombre</TableCell>
             <TableCell align="left">E-mail</TableCell>
-            <TableCell align="left">Telefone</TableCell>
-            <TableCell align="left">Plano</TableCell>
-            <TableCell align="left">Campanhas</TableCell>
+            <TableCell align="left">Telefono</TableCell>
+            <TableCell align="left">Plan</TableCell>
+            <TableCell align="left">Campañas</TableCell>
             <TableCell align="left">Status</TableCell>
-            <TableCell align="left">Criada Em</TableCell>
+            <TableCell align="left">Creado en</TableCell>
             <TableCell align="left">Vencimento</TableCell>
           </TableRow>
         </TableHead>
@@ -518,7 +518,7 @@ export default function CompaniesManager() {
       const companyList = await list();
       setRecords(companyList);
     } catch (e) {
-      toast.error("Não foi possível carregar a lista de registros");
+      toast.error("No fue posible cargar a lista de registros");
     }
     setLoading(false);
   };
@@ -533,10 +533,10 @@ export default function CompaniesManager() {
       }
       await loadPlans();
       handleCancel();
-      toast.success("Operação realizada com sucesso!");
+      toast.success("Operación realizada con éxito!");
     } catch (e) {
       toast.error(
-        "Não foi possível realizar a operação. Verifique se já existe uma empresa com o mesmo nome ou se os campos foram preenchidos corretamente"
+        "No se pudo realizar la operación. Comprueba si ya existe una empresa con el mismo nombre o si los campos se han rellenado correctamente"
       );
     }
     setLoading(false);
@@ -548,9 +548,9 @@ export default function CompaniesManager() {
       await remove(record.id);
       await loadPlans();
       handleCancel();
-      toast.success("Operação realizada com sucesso!");
+      toast.success("Operación realizada con éxito!");
     } catch (e) {
-      toast.error("Não foi possível realizar a operação");
+      toast.error("No fue posible realizar la operacion");
     }
     setLoading(false);
   };
@@ -620,7 +620,7 @@ export default function CompaniesManager() {
         onClose={() => setShowConfirmDialog(false)}
         onConfirm={() => handleDelete()}
       >
-        Deseja realmente excluir esse registro?
+        Desea realmente excluir este registro?
       </ConfirmationModal>
     </Paper>
   );
