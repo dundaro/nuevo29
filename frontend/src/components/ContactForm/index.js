@@ -125,7 +125,7 @@ export function ContactForm ({ initialContact, onSave, onCancel }) {
                                 name="number"
                                 error={touched.number && Boolean(errors.number)}
                                 helperText={touched.number && errors.number}
-                                placeholder="5513912344321"
+                                placeholder="513912344321"
                                 variant="outlined"
                                 margin="dense"
                                 fullWidth
