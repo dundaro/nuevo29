@@ -576,7 +576,7 @@ const MessageInputCustom = (props) => {
             );
             setPercentLoading(progress);
             console.log(
-              `A imagem  está ${progress}% carregada... `
+              `La imagen  está ${progress}% cargada... `
             );
           },
         })
@@ -585,13 +585,13 @@ const MessageInputCustom = (props) => {
             setMedias([])
             setPercentLoading(0);
             console.log(
-              `A imagem á foi enviada para o servidor!`
+              `La imagen fue enviada al servidor!`
 
             );
           })
           .catch((err) => {
             console.error(
-              `Houve um problema ao realizar o upload da imagem.`
+              `Hubo un problema al subir la imagen.`
             );
             console.log(err);
           });
