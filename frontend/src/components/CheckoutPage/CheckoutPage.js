@@ -28,7 +28,7 @@ import useStyles from "./styles";
 
 
 export default function CheckoutPage(props) {
-  const steps = ["Dados", "Personalizar", "Revisar"];
+  const steps = ["Datos", "Personalizar", "Revisar"];
   const { formId, formField } = checkoutFormModel;
   
   
@@ -90,7 +90,7 @@ function _renderStepContent(step, setFieldValue, setActiveStep, values ) {
       setDatePayment(data)
       actions.setSubmitting(true);
       setActiveStep(activeStep + 1);
-      toast.success("Assinatura realizada com sucesso!, aguardando a realização do pagamento");
+      toast.success("¡Suscripción completada exitosamente!, pendiente de pago");
     } catch (err) {
       actions.setSubmitting(false);
      
