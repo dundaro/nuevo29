@@ -265,7 +265,7 @@ export default function Options(props) {
         <Grid xs={12} sm={6} md={4} item>
           <FormControl className={classes.selectContainer}>
             <InputLabel id="group-type-label">
-              Ignorar Mensagens de Grupos
+              Ignorar Mensages de Grupos
             </InputLabel>
             <Select
               labelId="group-type-label"
@@ -317,7 +317,7 @@ export default function Options(props) {
               <MenuItem value={"text"}>Texto</MenuItem>
             </Select>
             <FormHelperText>
-              {loadingChatbotType && "Atcualizando..."}
+              {loadingChatbotType && "Actualizando..."}
             </FormHelperText>
           </FormControl>
         </Grid>
@@ -340,7 +340,7 @@ export default function Options(props) {
                     <MenuItem value={"enabled"}>Activado</MenuItem>
                   </Select>
                   <FormHelperText>
-                    {loadingAllowSignup && "Atualizando..."}
+                    {loadingAllowSignup && "Actualizando..."}
                   </FormHelperText>
                 </FormControl>
               </Grid>
