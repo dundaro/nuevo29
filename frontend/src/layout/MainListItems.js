@@ -390,7 +390,7 @@ const MainListItems = (props) => {
                       <ListItemIcon>
                         <ListIcon />
                       </ListItemIcon>
-                      <ListItemText primary="Listagem" />
+                      <ListItemText primary="Listado" />
                     </ListItem>
                     <ListItem
                       onClick={() => history.push("/contact-lists")}
