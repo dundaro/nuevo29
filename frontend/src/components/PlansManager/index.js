@@ -124,8 +124,8 @@ export function PlanManagerForm(props) {
                                 name="isPublic"
                                 margin="dense"
                             >
-                                <MenuItem value={true}>Sim</MenuItem>
-                                <MenuItem value={false}>Não</MenuItem>
+                                <MenuItem value={true}>Si</MenuItem>
+                                <MenuItem value={false}>No</MenuItem>
                             </Field>
                             </FormControl>
                         </Grid>
@@ -179,7 +179,7 @@ export function PlanManagerForm(props) {
                             <Grid justifyContent="flex-end" spacing={1} container>
                                 <Grid xs={4} md={1} item>
                                     <ButtonWithSpinner className={classes.fullWidth} loading={loading} onClick={() => onCancel()} variant="contained">
-                                        Limpar
+                                        Limpiar
                                     </ButtonWithSpinner>
                                 </Grid>
                                 {record.id !== undefined ? (
@@ -214,10 +214,10 @@ export function PlansManagerGrid(props) {
                 <TableHead>
                     <TableRow>
                         <TableCell align="center" style={{ width: '1%' }}>#</TableCell>
-                        <TableCell align="left">Nome</TableCell>
-                        <TableCell align="center">Usuários</TableCell>
+                        <TableCell align="left">Nombre</TableCell>
+                        <TableCell align="center">Usuarios</TableCell>
                         <TableCell align="center">Público</TableCell>
-                        <TableCell align="center">Conexões</TableCell>
+                        <TableCell align="center">Conexiones</TableCell>
                         <TableCell align="center">Filas</TableCell>
                         <TableCell align="center">Valor</TableCell>
                     </TableRow>
@@ -232,7 +232,7 @@ export function PlansManagerGrid(props) {
                             </TableCell>
                             <TableCell align="left">{row.name || '-'}</TableCell>
                             <TableCell align="center">{row.users || '-'}</TableCell>
-                            <TableCell align="center">{row.isPublic ? "Sim": "Não" || '-'}</TableCell>
+                            <TableCell align="center">{row.isPublic ? "Si": "No" || '-'}</TableCell>
                             <TableCell align="center">{row.connections || '-'}</TableCell>
                             <TableCell align="center">{row.queues || '-'}</TableCell>
                             <TableCell align="center">{row.value.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' }) || '-'}</TableCell>
@@ -274,7 +274,7 @@ export default function PlansManager() {
             console.log(planList)
             setRecords(planList)
         } catch (e) {
-            toast.error('Não foi possível carregar a lista de registros')
+            toast.error('No foe posible cargar a lista de registros')
         }
         setLoading(false)
     }
@@ -299,9 +299,9 @@ export default function PlansManager() {
             }
             await loadPlans()
             handleCancel()
-            toast.success('Operação realizada com sucesso!')
+            toast.success('Operacion realizada con exito!')
         } catch (e) {
-            toast.error('Não foi possível realizar a operação. Verifique se já existe uma plano com o mesmo nome ou se os campos foram preenchidos corretamente')
+            toast.error('No se pudo realizar la operación. Comprueba si ya existe un plan con el mismo nombre o si los campos se han rellenado correctamente')
         }
         setLoading(false)
     }
@@ -312,9 +312,9 @@ export default function PlansManager() {
             await remove(record.id)
             await loadPlans()
             handleCancel()
-            toast.success('Operação realizada com sucesso!')
+            toast.success('Operacion realizada con exito!')
         } catch (e) {
-            toast.error('Não foi possível realizar a operação')
+            toast.error('No fue posible realizar la operacion')
         }
         setLoading(false)
     }
@@ -366,12 +366,12 @@ export default function PlansManager() {
                 </Grid>
             </Grid>
             <ConfirmationModal
-                title="Exclusão de Registro"
+                title="Eliminación de registro"
                 open={showConfirmDialog}
                 onClose={() => setShowConfirmDialog(false)}
                 onConfirm={() => handleDelete()}
             >
-                Deseja realmente excluir esse registro?
+                Deseja realmente excluir ese registro?
             </ConfirmationModal>
         </Paper>
     )
