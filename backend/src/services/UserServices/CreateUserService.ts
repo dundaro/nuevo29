@@ -47,7 +47,7 @@ const CreateUserService = async ({
 
       if (usersCount >= company.plan.users) {
         throw new AppError(
-          `Número máximo de usuários já alcançado: ${usersCount}`
+          `Ha alcanzado el máximo numero de usuarios: ${usersCount}`
         );
       }
     }
