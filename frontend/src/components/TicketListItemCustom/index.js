@@ -271,7 +271,7 @@ const TicketListItemCustom = ({ ticket, setTabOpen }) => {
             />
           )}
           {ticket.status === "open" && (
-            <Tooltip title="Fechar Conversa">
+            <Tooltip title="Cerrar conversacion">
               <ClearOutlinedIcon
                 onClick={() => handleCloseTicket(ticket.id)}
                 fontSize="small"
@@ -293,7 +293,7 @@ const TicketListItemCustom = ({ ticket, setTabOpen }) => {
             </Tooltip>
           )}
           {profile === "admin" && (
-            <Tooltip title="Espiar Conversa">
+            <Tooltip title="Espiar Conversacion">
               <VisibilityIcon
                 onClick={() => setOpenTicketMessageDialog(true)}
                 fontSize="small"
@@ -365,7 +365,7 @@ const TicketListItemCustom = ({ ticket, setTabOpen }) => {
             />
           )}
           {ticket.status === "pending" && (
-            <Tooltip title="Fechar Conversa">
+            <Tooltip title="Cerrar Conversacion">
               <ClearOutlinedIcon
                 onClick={() => handleCloseTicket(ticket.id)}
                 fontSize="small"
@@ -395,7 +395,7 @@ const TicketListItemCustom = ({ ticket, setTabOpen }) => {
             </Tooltip>
           )}
           {ticket.status === "open" && (
-            <Tooltip title="Fechar Conversa">
+            <Tooltip title="Cerrar Conversacion">
               <ClearOutlinedIcon
                 onClick={() => handleCloseTicket(ticket.id)}
                 fontSize="small"
@@ -411,7 +411,7 @@ const TicketListItemCustom = ({ ticket, setTabOpen }) => {
             </Tooltip>
           )}
           {ticket.status === "pending" && (
-            <Tooltip title="Aceitar Conversa">
+            <Tooltip title="Aceptar Conversacion">
               <DoneIcon
                 onClick={() => handleAcceptTicket(ticket.id)}
                 fontSize="small"
@@ -434,7 +434,7 @@ const TicketListItemCustom = ({ ticket, setTabOpen }) => {
           )}
 
           {profile === "admin" && (
-            <Tooltip title="Espiar Conversa">
+            <Tooltip title="Espiar Conversacion">
               <VisibilityIcon
                 onClick={() => setOpenTicketMessageDialog(true)}
                 fontSize="small"
@@ -483,7 +483,7 @@ const TicketListItemCustom = ({ ticket, setTabOpen }) => {
         <Tooltip
           arrow
           placement="right"
-          title={ticket.queue?.name || "Sem fila"}
+          title={ticket.queue?.name || "Sin cola"}
         >
           <span
             style={{ backgroundColor: ticket.queue?.color || "#7C7C7C" }}
@@ -505,7 +505,7 @@ const TicketListItemCustom = ({ ticket, setTabOpen }) => {
                 color="textPrimary"
               >
                 {ticket.channel === "whatsapp" && (
-                  <Tooltip title={`Atribuido à ${ticketUser}`}>
+                  <Tooltip title={`Atribuido a ${ticketUser}`}>
                     <WhatsAppIcon fontSize="inherit" style={{ color: grey[700] }} />
                   </Tooltip>
                 )}{' '}
@@ -536,7 +536,7 @@ const TicketListItemCustom = ({ ticket, setTabOpen }) => {
           {ticket.status === "closed" && (
             <Badge
               className={classes.Radiusdot}
-              badgeContent={"FECHADO"}
+              badgeContent={"CERRADO"}
               //color="primary"
               style={{
                 backgroundColor: ticket.queue?.color || "#ff0000",
