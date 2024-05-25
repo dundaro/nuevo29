@@ -71,7 +71,7 @@ async function handleSendMessage(job) {
     const whatsapp = await Whatsapp.findByPk(data.whatsappId);
 
     if (whatsapp == null) {
-      throw Error("Whatsapp não identificado");
+      throw Error("Whatsapp no identificado");
     }
 
     const messageData: MessageData = data.data;
@@ -127,7 +127,7 @@ async function handleSendScheduledMessage(job) {
     scheduleRecord = await Schedule.findByPk(schedule.id);
   } catch (e) {
     Sentry.captureException(e);
-    logger.info(`Erro ao tentar consultar agendamento: ${schedule.id}`);
+    logger.info(`Error al intentar consultar agendamiento: ${schedule.id}`);
   }
 
   try {
@@ -143,7 +143,7 @@ async function handleSendScheduledMessage(job) {
       status: "ENVIADA"
     });
 
-    logger.info(`Mensagem agendada enviada para: ${schedule.contact.name}`);
+    logger.info(`Mensage agendado enviado para: ${schedule.contact.name}`);
     sendScheduledMessages.clean(15000, "completed");
   } catch (e: unknown) {
     Sentry.captureException(e);
@@ -440,7 +440,7 @@ async function handleProcessCampaign(job) {
             );
           }
         });
-        await campaign.update({ status: "EM_ANDAMENTO" });
+        await campaign.update({ status: "EN_PROCESO" });
       }
     }
   } catch (err: unknown) {
