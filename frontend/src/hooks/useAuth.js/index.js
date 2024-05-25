@@ -135,7 +135,7 @@ const useAuth = () => {
         setIsAuth(true);
         toast.success(i18n.t("auth.toasts.success"));
         if (Math.round(dias) < 5) {
-          toast.warn(`Sua assinatura vence em ${Math.round(dias)} ${Math.round(dias) === 1 ? 'dia' : 'dias'} `);
+          toast.warn(`Su cuenta expira en ${Math.round(dias)} ${Math.round(dias) === 1 ? 'dia' : 'dias'} `);
         }
         if (data.user.profile === "admin") {
           history.push("/");
@@ -145,8 +145,8 @@ const useAuth = () => {
         setLoading(false);
       } else {
         
-        toastError(`Opss! Sua assinatura venceu ${vencimento}.
-Entre em contato com o Suporte para mais informações! `);
+        toastError(`Opss! Su cuenta ha expirado ${vencimento}.
+Contacte a nuestro sistema de atencion al cliente! `);
         setLoading(false);
       }
 
